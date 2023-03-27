@@ -1,0 +1,18 @@
+# Create a beauty store database
+CREATE TABLE angel_store (id INTEGER PRIMARY KEY, item TEXT, category TEXT, price INTEGER, rating INTEGER);
+
+INSERT INTO angel_store VALUES (1, "Toner", "Skincare", 29.99, 4.1);
+INSERT INTO angel_store VALUES (2, "Serum", "Skincare", 34.99, 4.3);
+INSERT INTO angel_store VALUES (3, "Moisturizer", "Skincare", 27.99, 4.5);
+INSERT INTO angel_store VALUES (4, "Sunscreen", "Skincare", 14.99, 4.2);
+INSERT INTO angel_store VALUES (5, "Eye Cream", "Skincare", 21.99, 3.9);
+INSERT INTO angel_store VALUES (6, "Sleeping Mask", "Skincare", 39.99, 4.0);
+INSERT INTO angel_store VALUES (7, "Cleanser", "Skincare", 18.99, 4.1);
+INSERT INTO angel_store VALUES (8, "Primer", "Makeup", 12.99, 3.7);
+INSERT INTO angel_store VALUES (9, "Foundation", "Makeup", 44.99, 3.9);
+INSERT INTO angel_store VALUES (10, "Blush", "Makeup", 28.99, 4.6);
+INSERT INTO angel_store VALUES (11, "Eyeliner", "Makeup", 31.99, 4.0);
+INSERT INTO angel_store VALUES (12, "Bronzer", "Makeup", 28.99, 3.8);
+INSERT INTO angel_store VALUES (13, "Eyeshadow", "Makeup", 59.99, 4.0);
+INSERT INTO angel_store VALUES (14, "Eyebrow Pencil", "Makeup", 13.99, 4.5);
+INSERT INTO angel_store VALUES (15, "Setting Spray", "Makeup", 16.99, 4.3);
