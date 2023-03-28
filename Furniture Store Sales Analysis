@@ -86,5 +86,3 @@ INSERT INTO sales(transaction_date,product,price,payment_type,name,city,state,co
 INSERT INTO sales(transaction_date,product,price,payment_type,name,city,state,country,account_created,last_login,latitude,longitude) VALUES ('1/11/09 11:33','Chair',1200,'Visa','Stefan','Stavanger','Rogaland','Norway','1/11/09 9:02','1/12/09 10:37',58.9666667,5.75);
 INSERT INTO sales(transaction_date,product,price,payment_type,name,city,state,country,account_created,last_login,latitude,longitude) VALUES ('1/7/09 20:22','Chair',1200,'Visa','Gina','Red Deer','Alberta','Canada','11/23/08 19:30','1/12/09 12:24',52.2666667,-113.8);
 INSERT INTO sales(transaction_date,product,price,payment_type,name,city,state,country,account_created,last_login,latitude,longitude) VALUES ('1/2/09 22:00','Chair',1200,'Diners','Lynne','Memphis','TN','United states','1/2/09 21:04','1/12/09 13:18',35.14944,-90.04889);
-
-
