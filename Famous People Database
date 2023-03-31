@@ -1,9 +1,26 @@
 CREATE TABLE famous_people (id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, age INTEGER, occupation TEXT);
 
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Taylor Swift", "33", "singer");
-INSERT INTO famous_people (fullname, age, occupation) VALUES ("Selena Gomez", "30", "singer and actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Selena Gomez", "30", "singer and actress");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Justin Bieber", "30", "singer");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Hailey Bieber", "26", "businesswoman");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Dylan Sprouse", "30", "actor");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Cole Sprouse", "30", "actor");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Zayn Malik", "30", "singer");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Debby Ryan", "29", "actress");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Olivia Rodrigo", "20", "singer and actress");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Millie Bobbie Brown", "19", "actress");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Finn Wolfhard", "20", "actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Noah Schnapp", "18", "actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Sadie Sink", "20", "actress");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Caleb McLaughlin", "21", "actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Gaten Matarazzo", "20", "actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Charlie Puth", "31", "singer");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Ed Sheeran", "32", "singer");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Miley Cyrus", "singer and actress", "30");
+
+CREATE TABLE singers (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, fullname TEXT, famous_song TEXT);
+
+CREATE TABLE actor_actress (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, fullname TEXT, movie_or_show TEXT);
+
+CREATE TABLE relationship_type (id INTEGER PRIMARY KEY AUTOINCREMENT, person1_id INTEGER, person2_id INTEGER, relationship TEXT);
