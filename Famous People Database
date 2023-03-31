@@ -1,0 +1,9 @@
+CREATE TABLE famous_people (id INTEGER PRIMARY KEY AUTOINCREMENT, fullname TEXT, age INTEGER, occupation TEXT);
+
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Taylor Swift", "33", "singer");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Selena Gomez", "30", "singer and actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Justin Bieber", "30", "singer");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Hailey Bieber", "26", "businesswoman");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Dylan Sprouse", "30", "actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Cole Sprouse", "30", "actor");
+INSERT INTO famous_people (fullname, age, occupation) VALUES ("Zayn Malik", "30", "singer");
