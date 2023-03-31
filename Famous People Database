@@ -61,3 +61,7 @@ INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (5, 
 INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (5, 8, "Friends");
 INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (6, 8, "Friends");
 INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (10, 11, "Friends");
+
+## 1. Which pair(s) of celebrities are friends with each other?
+
+## 2. Which celebrity(s) is/are both singers and actors/actresses?
