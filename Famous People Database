@@ -10,17 +10,54 @@ INSERT INTO famous_people (fullname, age, occupation) VALUES ("Zayn Malik", "30"
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Debby Ryan", "29", "actress");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Olivia Rodrigo", "20", "singer and actress");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Millie Bobbie Brown", "19", "actress");
-INSERT INTO famous_people (fullname, age, occupation) VALUES ("Finn Wolfhard", "20", "actor");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Noah Schnapp", "18", "actor");
-INSERT INTO famous_people (fullname, age, occupation) VALUES ("Sadie Sink", "20", "actress");
-INSERT INTO famous_people (fullname, age, occupation) VALUES ("Caleb McLaughlin", "21", "actor");
-INSERT INTO famous_people (fullname, age, occupation) VALUES ("Gaten Matarazzo", "20", "actor");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Charlie Puth", "31", "singer");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Ed Sheeran", "32", "singer");
 INSERT INTO famous_people (fullname, age, occupation) VALUES ("Miley Cyrus", "singer and actress", "30");
 
-CREATE TABLE singers (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, fullname TEXT, famous_song TEXT);
+CREATE TABLE singers (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, famous_song TEXT);
 
-CREATE TABLE actor_actress (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, fullname TEXT, movie_or_show TEXT);
+INSERT INTO singers (person_id, famous_song) VALUES (1, "All Too Well");
+INSERT INTO singers (person_id, famous_song) VALUES (1, "Midnight Rain");
+INSERT INTO singers (person_id, famous_song) VALUES (1, "Cruel Summer");
+INSERT INTO singers (person_id, famous_song) VALUES (2, "Bad Liar");
+INSERT INTO singers (person_id, famous_song) VALUES (2, "Kill Them with Kindness");
+INSERT INTO singers (person_id, famous_song) VALUES (2, "Fetish");
+INSERT INTO singers (person_id, famous_song) VALUES (3, "Ghost of You");
+INSERT INTO singers (person_id, famous_song) VALUES (3, "Peaches");
+INSERT INTO singers (person_id, famous_song) VALUES (7, "Let Me");
+INSERT INTO singers (person_id, famous_song) VALUES (7, "Dusk Till Dawn");
+INSERT INTO singers (person_id, famous_song) VALUES (9, "Good for You");
+INSERT INTO singers (person_id, famous_song) VALUES (9, "deja vu");
+INSERT INTO singers (person_id, famous_song) VALUES (9, "Happier");
+INSERT INTO singers (person_id, famous_song) VALUES (12, "Attention");
+INSERT INTO singers (person_id, famous_song) VALUES (12, "The Way I Am");
+INSERT INTO singers (person_id, famous_song) VALUES (13, "I Don't Care");
+INSERT INTO singers (person_id, famous_song) VALUES (13, "Perfect");
+INSERT INTO singers (person_id, famous_song) VALUES (14, "Flowers");
+INSERT INTO singers (person_id, famous_song) VALUES (14, "Wrecking Ball");
+
+CREATE TABLE actor_actress (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, movie_or_show TEXT);
+
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (2, "Wizard of Waverly Place");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (5, "The Suite Life On Deck");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (6, "The Suite Life On Deck");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (6, "Riverdale");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (8, "The Suite Life On Deck");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (8, "Sweet 16");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (9, "High School Musical 4");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (10, "Stranger Things");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (10, "Enola Holmes");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (11, "Stranger Things");
+INSERT INTO actor_actress (person_id, movie_or_show) VALUES (14, "Hannah Montana");
 
 CREATE TABLE relationship_type (id INTEGER PRIMARY KEY AUTOINCREMENT, person1_id INTEGER, person2_id INTEGER, relationship TEXT);
+
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (1, 2, "Friends");
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (2, 14, "Friends");
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (2, 7, "Couple");
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (3, 4, "Married");
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (5, 6, "Siblings/Twins");
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (5, 8, "Friends");
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (6, 8, "Friends");
+INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (10, 11, "Friends");
