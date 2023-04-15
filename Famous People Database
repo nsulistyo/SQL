@@ -63,5 +63,22 @@ INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (6, 
 INSERT INTO relationship_type (person1_id, person2_id, relationship) VALUES (10, 11, "Friends");
 
 ## 1. Which pair(s) of celebrities are friends with each other?
+SELECT a.fullname, b.fullname FROM relationship_type 
+JOIN famous_people a ON a.id =person1_id 
+JOIN famous_people b ON b.id = person2_id 
+WHERE relationship = "Friends";
 
 ## 2. Which celebrity(s) is/are both singers and actors/actresses?
+SELECT fullname, occupation FROM famous_people 
+WHERE id IN (SELECT distinct a.person_id 
+FROM singers a JOIN actor_actress b 
+ON a.person_id = b.person_id);
+
+##3. How many pair(s) of celebrities that are married to each other?
+SELECT count(id) as "Num_Pair" from relationship_type WHERE relationship = "Married";
+
+##4. List Selena Gomez's song(s) and TV show or movie(s).
+SELECT famous_song, movie_or_show FROM singers a 
+JOIN actor_actress b ON a.person_id = b.person_id 
+JOIN famous_people c ON c.id = a.person_id and c.id = b.person_id
+WHERE fullname = "Selena Gomez";
