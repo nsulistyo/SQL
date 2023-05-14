@@ -1,3 +1,30 @@
 # This project contains a dataset of credit card complaints (source: Kaggle) which includes company, company responses, issues, etc.
 
 # I then determined what kind of information I wanted to know from the data.
+
+#1. List all columns from the credit card complaints for Citibank that were submitted through web/website.
+SELECT * FROM BIT_DB.CreditCard
+WHERE company = 'Citibank' and submitted = 'Web';
+
+#2. What are the top 3 issues (most in quantity) listed in the credit card complaints?
+SELECT issue, COUNT(issue) FROM BIT_DB.CreditCard
+WHERE issue <> 'Other'
+GROUP BY issue 
+ORDER BY count(issue) desc
+LIMIT 3;
+
+#3. How many credit card complaints submitted in 2020?
+SELECT COUNT(complaint_ID) as 'No of Complaints in 2020' 
+FROM BIT_DB.CreditCard
+WHERE date_sent like '%2020%';
+
+#4. List top 5 companies with the most credit card complaints in 2021.
+SELECT company, count(complaint_ID) FROM BIT_DB.CreditCard
+GROUP BY company
+HAVING date_sent LIKE '%2021%'
+ORDER BY count(complaint_ID) desc
+LIMIT 3;
+
+#5. Write a query that shows how the issues of billing disputes are responded/solved by the company.
+SELECT distinct company_response, issue FROM BIT_DB.CreditCard
+WHERE issue = 'Billing disputes';
