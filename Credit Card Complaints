@@ -18,7 +18,7 @@ SELECT COUNT(complaint_ID) as 'No of Complaints in 2020'
 FROM BIT_DB.CreditCard
 WHERE date_sent like '%2020%';
 
-#4. List top 5 companies with the most credit card complaints in 2021.
+#4. List top 3 companies with the most credit card complaints in 2021.
 SELECT company, count(complaint_ID) FROM BIT_DB.CreditCard
 GROUP BY company
 HAVING date_sent LIKE '%2021%'
@@ -28,3 +28,19 @@ LIMIT 3;
 #5. Write a query that shows how the issues of billing disputes are responded/solved by the company.
 SELECT distinct company_response, issue FROM BIT_DB.CreditCard
 WHERE issue = 'Billing disputes';
+
+#6. Give comment ratings for the credit card companies based on their total number of complaints in 2021.
+    Below 100 complaints = "Great"
+    Between 100 and 500 complaints = "Average"
+    Over 500 = "Needs Improvement"
+
+SELECT company, count(complaint_ID),
+CASE 
+  WHEN count(complaint_ID) < 10 THEN 'Great'
+  WHEN count(complaint_ID) between 10 and 50 THEN 'Average'
+  ELSE 'Needs Improvement'
+  END AS 'Rating'
+FROM BIT_DB.CreditCard
+WHERE date_received like '%2021%'
+GROUP BY company
+ORDER BY count(complaint_ID);
