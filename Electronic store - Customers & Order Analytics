@@ -1,7 +1,7 @@
 #In this SQL, I'm querying a database with multiple tables in it to quantify statistics about customer and order data. 
 
 #1. How many orders were placed in January?
-``` sql
+```sql
 SELECT COUNT(orderID) FROM BIT_DB.JanSales
 WHERE length(orderID) = 6 AND orderID <> 'OrderID';
 ```
